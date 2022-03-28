@@ -1,15 +1,18 @@
-#include <iostream> 
+#include <iostream>
 #include <fstream>
 using namespace std;
 int main()
 {
-    ofstream file ("conclusion");
-    int a,b;
-    cin >> a >> b;
-    for (int i = a; i <= b; i++)
-    {
-    file << i*3 << endl;
-    }
-    file.close();
-    return 0;
+int a,b;
+cout << "Введите число a: ";
+cin >> a;
+cout << "Введите число b больше a: ";
+cin >>  b;
+ofstream file ("con");
+for (int i= a; i <= b; i++)
+{
+file <<  i*3 << endl;
+}
+file.close();
+return 0;
 }
