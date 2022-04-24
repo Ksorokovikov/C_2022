@@ -1,0 +1,18 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() 
+{
+ifstream file ("output");
+int t;
+int k=0;
+while(file >> t)
+{
+k=k+1;
+cout << k  << t << "\n";
+}
+file.close();
+return 0;
+}
