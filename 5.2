@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void Sort(int *t){
+int temporary; //временная переменная для обмена элементов местами
+
+for(int i=0; i<9; i++)
+for(int j=i+1; j<10; j++)
+
+if(*(t+i) < *(t+j)) 
+{ 
+temporary=*(t+i);
+*(t+i) = *(t+j);
+*(t+j) = temporary; 
+} // меняем элементы местами 
+
+for(int i=0; i<10; i++)
+cout << *(t+i) << ' ';
+cout << endl;  // вывод сортированного массива
+return; 
+}
+int main(){
+int a[10] = {1, 8, 3, 6, 5, 4, 9, 2, 8, 12,};
+Sort(a);
+}
