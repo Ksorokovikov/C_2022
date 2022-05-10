@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+char a[10];
+cout << "Vedite chislo" << '\n';
+char *i;
+cin >> a;
+i = a;
+while (*i){
+(*i)++;
+i++;
+}
+cout << a << " result " << endl;
+return 0;
+}
