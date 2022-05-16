@@ -1,17 +1,15 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-int main() 
+int main()
 {
-char a[10];
-cout << "Vedite chislo" << '\n';
-char *i;
+cout << "Vedite line" << '\n';
+char a[10], *p;
 cin >> a;
-i = a;
-while (*i){
-(*i)++;
-i++;
-}
-cout << a << " result " << endl;
+p = a;
+for(int i=0; i<strlen(p);
+i++) *(p+i) = *(p+i)+1;
+cout << p << endl;
 return 0;
 }
