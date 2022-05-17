@@ -1,21 +1,13 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
- 
-double SquaredSum(double x, double y) {
-    return pow((x + y), 2);
-}
 
-int main() {
-double x, y, a, b;
-cout << "Введите числа" << endl;
-cin >> x >> y;
-cin >> a >> b;
-    
-double s,t;
-s = x / y;
-t = a / b;
-cout << SquaredSum(s, t) << endl;
-   
+float SquaredSum(float x, float y)
+{
+return pow((x + y), 2);
+}
+int main(){
+cout << SquaredSum(12, 6) <<endl;
+cout << SquaredSum(12, -6) <<endl;
 return 0;
 }
