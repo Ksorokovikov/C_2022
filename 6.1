@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+void reverse(char *x)
+{
+for(int i=0; i<strlen(x); i++)
+cout<<*(x+strlen(x)-1-i);
+cout<<endl;
+return;
+}
+int main(){
+char a[] = "Test string";
+cout << a << endl;
+reverse (a);
+return 0;
+}
