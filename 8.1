@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class CreditCard {
+public:
+int Number;
+int Balance;
+    CreditCard(int NUM, float BAL){
+        Number = NUM;
+        Balance = BAL;
+    }
+    int Put(int v){
+        Balance=Balance+v;
+        return 0;
+    }
+
+    int Take(int v){
+        Balance=Balance-v;
+        return 0;
+    }
+};
+
+int main(){
+    int BAL = 50;
+    CreditCard firstCC(1234, BAL);
+    cout << "На карте: " << BAL << endl;
+    CreditCard *ukzaz=&firstCC;
+    ukzaz->Put(99);
+    cout << "Осталось: " << firstCC.Balance << endl;
+    ukzaz->Take(80);
+    cout << "Осталось: " << firstCC.Balance;
+return 0;
+}
