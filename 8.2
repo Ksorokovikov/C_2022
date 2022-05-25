@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+
+class CreditCard{
+	public:
+	int Number;
+	int Balance;
+	CreditCard(int NUM, int BAL){
+		Number = NUM;
+		Balance = BAL;
+	}
+};
+
+int Transfer(CreditCard Odin, CreditCard Dva, int v);
+
+int main() {
+    CreditCard Alpha(2345, 180);
+    CreditCard Bravo(1732, 50);
+    CreditCard Gamma(1732, 15);
+
+    Transfer(Bravo, Alpha, 60);
+    Transfer(Bravo, Gamma, 10);
+    Transfer(Bravo, Alpha, 30);
+    return 0;
+}
+
+int Transfer(CreditCard Odin, CreditCard Dva, int v){
+	if(Odin.Balance < v) { 
+	    cout << "Не хватает баланса на карте" << endl;
+	    return 0;
+	}
+	if(Odin.Number == Dva.Number) {
+		cout << "Ошибка! Номера карт совпадают" << endl;
+		return 0;
+	} else {
+        cout << "Остаток на 1 карте: " << Odin.Balance - v << endl;
+	    cout << "Остаток на 2 карте: " << Dva.Balance + v << endl;
+	    return 0;
+	}
+}
